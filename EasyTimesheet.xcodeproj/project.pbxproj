@@ -1,0 +1,408 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		52B94447215100A100007199 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B94446215100A100007199 /* AppDelegate.m */; };
+		52B9444A215100A100007199 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B94449215100A100007199 /* ViewController.m */; };
+		52B9444D215100A100007199 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52B9444B215100A100007199 /* Main.storyboard */; };
+		52B9444F215100A300007199 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52B9444E215100A300007199 /* Assets.xcassets */; };
+		52B94452215100A300007199 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52B94450215100A300007199 /* LaunchScreen.storyboard */; };
+		52B94455215100A300007199 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B94454215100A300007199 /* main.m */; };
+		52D3426A2154F6BF00A579EF /* TimeSheetTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D342682154F6BF00A579EF /* TimeSheetTableViewCell.m */; };
+		52D3426B2154F6BF00A579EF /* TimeSheetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52D342692154F6BF00A579EF /* TimeSheetTableViewCell.xib */; };
+		52D3426F2155021400A579EF /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D3426E2155021400A579EF /* RegisterViewController.m */; };
+		52D342722155024000A579EF /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D342712155024000A579EF /* HomeViewController.m */; };
+		52D34275215502B000A579EF /* TimesheetTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D34274215502B000A579EF /* TimesheetTableViewController.m */; };
+		52D34278215502EE00A579EF /* EditTimesheetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D34277215502EE00A579EF /* EditTimesheetViewController.m */; };
+		52D3427B2155036800A579EF /* CompanyCRUDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D3427A2155036800A579EF /* CompanyCRUDViewController.m */; };
+		52D3427E2155039900A579EF /* CompanyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D3427D2155039900A579EF /* CompanyTableViewController.m */; };
+		52D342812157B96700A579EF /* FilterTimesheetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D342802157B96700A579EF /* FilterTimesheetViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		52B94442215100A100007199 /* EasyTimesheet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyTimesheet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		52B94445215100A100007199 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		52B94446215100A100007199 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		52B94448215100A100007199 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		52B94449215100A100007199 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		52B9444C215100A100007199 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		52B9444E215100A300007199 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		52B94451215100A300007199 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		52B94453215100A300007199 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52B94454215100A300007199 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		52D342672154F6BF00A579EF /* TimeSheetTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimeSheetTableViewCell.h; sourceTree = "<group>"; };
+		52D342682154F6BF00A579EF /* TimeSheetTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimeSheetTableViewCell.m; sourceTree = "<group>"; };
+		52D342692154F6BF00A579EF /* TimeSheetTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeSheetTableViewCell.xib; sourceTree = "<group>"; };
+		52D3426D2155021400A579EF /* RegisterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		52D3426E2155021400A579EF /* RegisterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		52D342702155024000A579EF /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		52D342712155024000A579EF /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		52D34273215502B000A579EF /* TimesheetTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimesheetTableViewController.h; sourceTree = "<group>"; };
+		52D34274215502B000A579EF /* TimesheetTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimesheetTableViewController.m; sourceTree = "<group>"; };
+		52D34276215502EE00A579EF /* EditTimesheetViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EditTimesheetViewController.h; sourceTree = "<group>"; };
+		52D34277215502EE00A579EF /* EditTimesheetViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EditTimesheetViewController.m; sourceTree = "<group>"; };
+		52D342792155036800A579EF /* CompanyCRUDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CompanyCRUDViewController.h; sourceTree = "<group>"; };
+		52D3427A2155036800A579EF /* CompanyCRUDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CompanyCRUDViewController.m; sourceTree = "<group>"; };
+		52D3427C2155039900A579EF /* CompanyTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CompanyTableViewController.h; sourceTree = "<group>"; };
+		52D3427D2155039900A579EF /* CompanyTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CompanyTableViewController.m; sourceTree = "<group>"; };
+		52D3427F2157B96700A579EF /* FilterTimesheetViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FilterTimesheetViewController.h; sourceTree = "<group>"; };
+		52D342802157B96700A579EF /* FilterTimesheetViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FilterTimesheetViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		52B9443F215100A100007199 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		52B94439215100A100007199 = {
+			isa = PBXGroup;
+			children = (
+				52B94444215100A100007199 /* EasyTimesheet */,
+				52B94443215100A100007199 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		52B94443215100A100007199 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				52B94442215100A100007199 /* EasyTimesheet.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		52B94444215100A100007199 /* EasyTimesheet */ = {
+			isa = PBXGroup;
+			children = (
+				52D3426C215501CF00A579EF /* ViewControllers */,
+				52D3425E2154F61A00A579EF /* TableViewTimeSheet */,
+				52B94445215100A100007199 /* AppDelegate.h */,
+				52B94446215100A100007199 /* AppDelegate.m */,
+				52B94448215100A100007199 /* ViewController.h */,
+				52B94449215100A100007199 /* ViewController.m */,
+				52B9444B215100A100007199 /* Main.storyboard */,
+				52B9444E215100A300007199 /* Assets.xcassets */,
+				52B94450215100A300007199 /* LaunchScreen.storyboard */,
+				52B94453215100A300007199 /* Info.plist */,
+				52B94454215100A300007199 /* main.m */,
+			);
+			path = EasyTimesheet;
+			sourceTree = "<group>";
+		};
+		52D3425E2154F61A00A579EF /* TableViewTimeSheet */ = {
+			isa = PBXGroup;
+			children = (
+				52D342672154F6BF00A579EF /* TimeSheetTableViewCell.h */,
+				52D342682154F6BF00A579EF /* TimeSheetTableViewCell.m */,
+				52D342692154F6BF00A579EF /* TimeSheetTableViewCell.xib */,
+			);
+			path = TableViewTimeSheet;
+			sourceTree = "<group>";
+		};
+		52D3426C215501CF00A579EF /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				52D3426D2155021400A579EF /* RegisterViewController.h */,
+				52D3426E2155021400A579EF /* RegisterViewController.m */,
+				52D342702155024000A579EF /* HomeViewController.h */,
+				52D342712155024000A579EF /* HomeViewController.m */,
+				52D34273215502B000A579EF /* TimesheetTableViewController.h */,
+				52D34274215502B000A579EF /* TimesheetTableViewController.m */,
+				52D34276215502EE00A579EF /* EditTimesheetViewController.h */,
+				52D34277215502EE00A579EF /* EditTimesheetViewController.m */,
+				52D342792155036800A579EF /* CompanyCRUDViewController.h */,
+				52D3427A2155036800A579EF /* CompanyCRUDViewController.m */,
+				52D3427C2155039900A579EF /* CompanyTableViewController.h */,
+				52D3427D2155039900A579EF /* CompanyTableViewController.m */,
+				52D3427F2157B96700A579EF /* FilterTimesheetViewController.h */,
+				52D342802157B96700A579EF /* FilterTimesheetViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		52B94441215100A100007199 /* EasyTimesheet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52B94458215100A300007199 /* Build configuration list for PBXNativeTarget "EasyTimesheet" */;
+			buildPhases = (
+				52B9443E215100A100007199 /* Sources */,
+				52B9443F215100A100007199 /* Frameworks */,
+				52B94440215100A100007199 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EasyTimesheet;
+			productName = EasyTimesheet;
+			productReference = 52B94442215100A100007199 /* EasyTimesheet.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		52B9443A215100A100007199 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Cliverson Obrzut";
+				TargetAttributes = {
+					52B94441215100A100007199 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 52B9443D215100A100007199 /* Build configuration list for PBXProject "EasyTimesheet" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 52B94439215100A100007199;
+			productRefGroup = 52B94443215100A100007199 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				52B94441215100A100007199 /* EasyTimesheet */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		52B94440215100A100007199 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52B94452215100A300007199 /* LaunchScreen.storyboard in Resources */,
+				52B9444F215100A300007199 /* Assets.xcassets in Resources */,
+				52D3426B2154F6BF00A579EF /* TimeSheetTableViewCell.xib in Resources */,
+				52B9444D215100A100007199 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		52B9443E215100A100007199 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52D3426F2155021400A579EF /* RegisterViewController.m in Sources */,
+				52D3427E2155039900A579EF /* CompanyTableViewController.m in Sources */,
+				52D34275215502B000A579EF /* TimesheetTableViewController.m in Sources */,
+				52B9444A215100A100007199 /* ViewController.m in Sources */,
+				52D3427B2155036800A579EF /* CompanyCRUDViewController.m in Sources */,
+				52B94455215100A300007199 /* main.m in Sources */,
+				52D3426A2154F6BF00A579EF /* TimeSheetTableViewCell.m in Sources */,
+				52D342812157B96700A579EF /* FilterTimesheetViewController.m in Sources */,
+				52D34278215502EE00A579EF /* EditTimesheetViewController.m in Sources */,
+				52B94447215100A100007199 /* AppDelegate.m in Sources */,
+				52D342722155024000A579EF /* HomeViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		52B9444B215100A100007199 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				52B9444C215100A100007199 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		52B94450215100A300007199 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				52B94451215100A300007199 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		52B94456215100A300007199 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		52B94457215100A300007199 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		52B94459215100A300007199 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C2JM7XLS3M;
+				INFOPLIST_FILE = EasyTimesheet/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ait.EasyTimesheet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		52B9445A215100A300007199 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C2JM7XLS3M;
+				INFOPLIST_FILE = EasyTimesheet/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ait.EasyTimesheet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		52B9443D215100A100007199 /* Build configuration list for PBXProject "EasyTimesheet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52B94456215100A300007199 /* Debug */,
+				52B94457215100A300007199 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52B94458215100A300007199 /* Build configuration list for PBXNativeTarget "EasyTimesheet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52B94459215100A300007199 /* Debug */,
+				52B9445A215100A300007199 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 52B9443A215100A100007199 /* Project object */;
+}

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="130" id="KGk-i7-Jjw" customClass="TimeSheetTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="130"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="129.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XU8-26-WgM">
+                        <rect key="frame" x="16" y="11" width="240" height="18"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start: End: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yzg-Cp-oBl">
+                        <rect key="frame" x="16" y="40" width="240" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Company:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9zd-op-c7Z">
+                        <rect key="frame" x="16" y="69" width="177" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Day Rate:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eaG-mt-ncb">
+                        <rect key="frame" x="16" y="98" width="104" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="104" id="QIC-4j-Z5l"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gross Pay:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9TE-Pv-5gG">
+                        <rect key="frame" x="128" y="98" width="65" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s5u-wc-PuB">
+                        <rect key="frame" x="264" y="11" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="sPF-Hu-tcU"/>
+                            <constraint firstAttribute="height" constant="40" id="tLe-Ls-J5Z"/>
+                        </constraints>
+                        <state key="normal" image="EditIcon"/>
+                        <connections>
+                            <action selector="editButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Tbd-3v-L5n"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$1900.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x8V-nq-AgI">
+                        <rect key="frame" x="201" y="90" width="103" height="24"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <color key="textColor" red="0.23137254900000001" green="0.56470588239999997" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="s5u-wc-PuB" firstAttribute="leading" secondItem="yzg-Cp-oBl" secondAttribute="trailing" constant="8" id="0p0-gt-9fr"/>
+                    <constraint firstAttribute="bottom" secondItem="x8V-nq-AgI" secondAttribute="bottom" constant="15.5" id="15A-ss-tjw"/>
+                    <constraint firstItem="XU8-26-WgM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="1FE-CV-hYm"/>
+                    <constraint firstAttribute="trailing" secondItem="s5u-wc-PuB" secondAttribute="trailing" constant="16" id="5Vy-ML-Tus"/>
+                    <constraint firstItem="9TE-Pv-5gG" firstAttribute="trailing" secondItem="9zd-op-c7Z" secondAttribute="trailing" id="7YM-dd-qOE"/>
+                    <constraint firstItem="x8V-nq-AgI" firstAttribute="top" secondItem="9zd-op-c7Z" secondAttribute="bottom" constant="5" id="81j-SN-DrD"/>
+                    <constraint firstItem="9TE-Pv-5gG" firstAttribute="leading" secondItem="eaG-mt-ncb" secondAttribute="trailing" constant="8" id="CX4-Ww-6vR"/>
+                    <constraint firstItem="yzg-Cp-oBl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Ehh-lL-kEu"/>
+                    <constraint firstItem="yzg-Cp-oBl" firstAttribute="top" secondItem="XU8-26-WgM" secondAttribute="bottom" constant="11" id="FDE-41-WaU"/>
+                    <constraint firstItem="eaG-mt-ncb" firstAttribute="top" secondItem="9zd-op-c7Z" secondAttribute="bottom" constant="13" id="FpZ-34-lKg"/>
+                    <constraint firstAttribute="bottom" secondItem="9TE-Pv-5gG" secondAttribute="bottom" constant="15.5" id="IYW-id-11a"/>
+                    <constraint firstItem="XU8-26-WgM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="Jd3-Wb-CBw"/>
+                    <constraint firstItem="9zd-op-c7Z" firstAttribute="top" secondItem="yzg-Cp-oBl" secondAttribute="bottom" constant="13" id="Khq-WD-Pc3"/>
+                    <constraint firstAttribute="trailing" secondItem="9zd-op-c7Z" secondAttribute="trailing" constant="127" id="Qy6-WU-Jrk"/>
+                    <constraint firstItem="s5u-wc-PuB" firstAttribute="leading" secondItem="XU8-26-WgM" secondAttribute="trailing" constant="8" id="UO1-ai-IbG"/>
+                    <constraint firstAttribute="bottom" secondItem="eaG-mt-ncb" secondAttribute="bottom" constant="15.5" id="bd3-dx-svy"/>
+                    <constraint firstItem="eaG-mt-ncb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="dGZ-5n-uPs"/>
+                    <constraint firstItem="9TE-Pv-5gG" firstAttribute="top" secondItem="9zd-op-c7Z" secondAttribute="bottom" constant="13" id="dQM-C5-cJP"/>
+                    <constraint firstItem="s5u-wc-PuB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="hlG-n6-dsl"/>
+                    <constraint firstItem="9zd-op-c7Z" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="nYx-I9-LFW"/>
+                    <constraint firstItem="x8V-nq-AgI" firstAttribute="leading" secondItem="9TE-Pv-5gG" secondAttribute="trailing" constant="8" id="rue-AM-m2q"/>
+                    <constraint firstAttribute="trailing" secondItem="x8V-nq-AgI" secondAttribute="trailing" constant="16" id="zwz-kd-3Qr"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="amountLabel" destination="x8V-nq-AgI" id="d5J-zV-Gal"/>
+                <outlet property="companyNameLabel" destination="9zd-op-c7Z" id="mIf-pA-ZkK"/>
+                <outlet property="dateLabel" destination="XU8-26-WgM" id="oFl-61-Kiu"/>
+                <outlet property="dayRateLabel" destination="eaG-mt-ncb" id="I1O-F7-alm"/>
+                <outlet property="grossPayLabel" destination="9TE-Pv-5gG" id="zKR-Zc-8cJ"/>
+                <outlet property="startEndLabel" destination="XU8-26-WgM" id="qvI-Ff-LOW"/>
+            </connections>
+            <point key="canvasLocation" x="35" y="97"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="EditIcon" width="20" height="20"/>
+    </resources>
+</document>
