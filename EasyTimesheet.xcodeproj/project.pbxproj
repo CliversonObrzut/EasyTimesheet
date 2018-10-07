@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52760F642169DDD800797CF3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52760F632169DDD800797CF3 /* GoogleService-Info.plist */; };
 		52B94447215100A100007199 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B94446215100A100007199 /* AppDelegate.m */; };
 		52B9444A215100A100007199 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B94449215100A100007199 /* ViewController.m */; };
 		52B9444D215100A100007199 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52B9444B215100A100007199 /* Main.storyboard */; };
@@ -22,9 +23,12 @@
 		52D3427B2155036800A579EF /* CompanyCRUDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D3427A2155036800A579EF /* CompanyCRUDViewController.m */; };
 		52D3427E2155039900A579EF /* CompanyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D3427D2155039900A579EF /* CompanyTableViewController.m */; };
 		52D342812157B96700A579EF /* FilterTimesheetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D342802157B96700A579EF /* FilterTimesheetViewController.m */; };
+		9FBFC8137535CC0ED626C271 /* libPods-EasyTimesheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BFE7752E6581FE1A76F543D5 /* libPods-EasyTimesheet.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C8FE6629BA967C73EA1F1B6 /* Pods-EasyTimesheet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyTimesheet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EasyTimesheet/Pods-EasyTimesheet.debug.xcconfig"; sourceTree = "<group>"; };
+		52760F632169DDD800797CF3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		52B94442215100A100007199 /* EasyTimesheet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyTimesheet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52B94445215100A100007199 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		52B94446215100A100007199 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -52,6 +56,8 @@
 		52D3427D2155039900A579EF /* CompanyTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CompanyTableViewController.m; sourceTree = "<group>"; };
 		52D3427F2157B96700A579EF /* FilterTimesheetViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FilterTimesheetViewController.h; sourceTree = "<group>"; };
 		52D342802157B96700A579EF /* FilterTimesheetViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FilterTimesheetViewController.m; sourceTree = "<group>"; };
+		AEC471B750A2152BAAEF49C8 /* Pods-EasyTimesheet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyTimesheet.release.xcconfig"; path = "Pods/Target Support Files/Pods-EasyTimesheet/Pods-EasyTimesheet.release.xcconfig"; sourceTree = "<group>"; };
+		BFE7752E6581FE1A76F543D5 /* libPods-EasyTimesheet.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EasyTimesheet.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,17 +65,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FBFC8137535CC0ED626C271 /* libPods-EasyTimesheet.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A79ECFF1105913B8518BD9F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4C8FE6629BA967C73EA1F1B6 /* Pods-EasyTimesheet.debug.xcconfig */,
+				AEC471B750A2152BAAEF49C8 /* Pods-EasyTimesheet.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		52B94439215100A100007199 = {
 			isa = PBXGroup;
 			children = (
 				52B94444215100A100007199 /* EasyTimesheet */,
 				52B94443215100A100007199 /* Products */,
+				3A79ECFF1105913B8518BD9F /* Pods */,
+				7DA8F9F01CBB6620E3A0649C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -84,6 +102,7 @@
 		52B94444215100A100007199 /* EasyTimesheet */ = {
 			isa = PBXGroup;
 			children = (
+				52760F632169DDD800797CF3 /* GoogleService-Info.plist */,
 				52D3426C215501CF00A579EF /* ViewControllers */,
 				52D3425E2154F61A00A579EF /* TableViewTimeSheet */,
 				52B94445215100A100007199 /* AppDelegate.h */,
@@ -130,6 +149,14 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		7DA8F9F01CBB6620E3A0649C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BFE7752E6581FE1A76F543D5 /* libPods-EasyTimesheet.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,9 +164,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 52B94458215100A300007199 /* Build configuration list for PBXNativeTarget "EasyTimesheet" */;
 			buildPhases = (
+				74D538B74741279F7DFE041E /* [CP] Check Pods Manifest.lock */,
 				52B9443E215100A100007199 /* Sources */,
 				52B9443F215100A100007199 /* Frameworks */,
 				52B94440215100A100007199 /* Resources */,
+				6F45FA832391F2EEA302F026 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -189,12 +218,62 @@
 			files = (
 				52B94452215100A300007199 /* LaunchScreen.storyboard in Resources */,
 				52B9444F215100A300007199 /* Assets.xcassets in Resources */,
+				52760F642169DDD800797CF3 /* GoogleService-Info.plist in Resources */,
 				52D3426B2154F6BF00A579EF /* TimeSheetTableViewCell.xib in Resources */,
 				52B9444D215100A100007199 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6F45FA832391F2EEA302F026 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-EasyTimesheet/Pods-EasyTimesheet-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/gRPC/gRPCCertificates.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/gRPCCertificates.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EasyTimesheet/Pods-EasyTimesheet-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		74D538B74741279F7DFE041E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EasyTimesheet-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		52B9443E215100A100007199 /* Sources */ = {
@@ -349,6 +428,7 @@
 		};
 		52B94459215100A300007199 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C8FE6629BA967C73EA1F1B6 /* Pods-EasyTimesheet.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -366,6 +446,7 @@
 		};
 		52B9445A215100A300007199 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AEC471B750A2152BAAEF49C8 /* Pods-EasyTimesheet.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

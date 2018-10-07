@@ -14,9 +14,23 @@
 
 @implementation ViewController
 
+@synthesize db, handle;
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:<#animated#>];
+    
+    self.handle = [[FIRAuth auth] addAuthStateDidChangeListener:^(FIRAuth * _Nonnull auth, FIRUser * _Nullable user) {
+        if(!user) {
+            
+        }
+    }];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    self.db = [FIRFirestore firestore];
+    
 }
 
 
@@ -26,4 +40,11 @@
 }
 
 
+- (IBAction)LoginButton:(id)sender {
+    
+}
+
+- (IBAction)RegisterNavButton:(id)sender {
+    
+}
 @end

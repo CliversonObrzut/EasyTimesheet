@@ -61,6 +61,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
+                                                    <action selector="LoginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YNR-uL-f3u"/>
                                                     <segue destination="hsN-4i-lJz" kind="show" identifier="login_identifier_segue" id="avY-R8-f6z"/>
                                                 </connections>
                                             </button>
@@ -73,6 +74,7 @@
                                                     <color key="titleColor" red="0.50196078430000002" green="0.79607843140000001" blue="0.79215686269999996" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
+                                                    <action selector="RegisterButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XB7-Hj-juQ"/>
                                                     <segue destination="Y3B-8c-qF2" kind="show" identifier="register_identifier_segue" id="Nws-YO-I1W"/>
                                                 </connections>
                                             </button>
@@ -133,6 +135,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="HVR-ic-geY" id="4xu-6D-8ah"/>
+                        <outlet property="passwordTextField" destination="Aw7-J1-IJA" id="NDW-Ib-0eX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -1134,6 +1140,6 @@
         <image name="TimeSheetIcon" width="20" height="20"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="bbn-6f-f4k"/>
+        <segue reference="avY-R8-f6z"/>
     </inferredMetricsTieBreakers>
 </document>
