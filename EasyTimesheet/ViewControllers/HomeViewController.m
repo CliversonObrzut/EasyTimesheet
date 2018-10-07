@@ -13,10 +13,42 @@
 @end
 
 @implementation HomeViewController
+@synthesize tsDate, tsHour, tsMinute, tsCompany, datePicker, timePicker;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self setDatePicker];
+}
+
+-(void) setDatePicker {
+    self.datePicker = [[UIDatePicker alloc] initWithFrame:CGRectZero];
+    self.timePicker = [[UIDatePicker alloc] initWithFrame:CGRectZero];
+    
+    [self.datePicker setDatePickerMode:UIDatePickerModeDate];
+    [self.timePicker setDatePickerMode:UIDatePickerModeTime];
+    
+    [self.datePicker addTarget:self action:@selector(onDatePickerValueChanged:) forControlEvents:UIControlEventAllEvents];
+    [self.timePicker addTarget:self action:@selector(onTimePickerValueChanged:) forControlEvents:UIControlEventAllEvents];
+    self.tsDate.inputView = self.datePicker;
+    self.tsHour.inputView = self.timePicker;
+    self.tsMinute.inputView = self.timePicker;
+}
+- (void) getDate {
+    
+}
+- (void) onDatePickerValueChanged:(UIDatePicker *) datePicker {
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+     [dateFormatter setDateFormat:@"dd/MM/yyyy"];
+    self.tsDate.text = [dateFormatter stringFromDate:datePicker.date];
+}
+
+- (void) onTimePickerValueChanged:(UIDatePicker *) timePicker {
+    NSDateFormatter *hourFormatter = [[NSDateFormatter alloc] init];
+    NSDateFormatter *minuteFormatter = [[NSDateFormatter alloc] init];
+    [hourFormatter setDateFormat:@"HH"];
+    [minuteFormatter setDateFormat:@"mm"];
+    self.tsHour.text = [hourFormatter stringFromDate:timePicker.date];
+    self.tsMinute.text = [minuteFormatter stringFromDate:timePicker.date];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,4 +66,8 @@
 }
 */
 
+- (IBAction)inOutSelector:(UISwitch *)sender {
+}
+- (IBAction)doneButton:(id)sender {
+}
 @end

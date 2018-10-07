@@ -385,6 +385,9 @@
                                             <switch opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3vV-Tc-JHT">
                                                 <rect key="frame" x="163" y="289" width="51" height="31"/>
                                                 <color key="onTintColor" red="0.50196078430000002" green="0.79607843140000001" blue="0.79215686269999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="inOutSelector:" destination="wHr-yN-4db" eventType="valueChanged" id="tzW-PC-lHz"/>
+                                                </connections>
                                             </switch>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select Date" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1FB-FN-tCl">
                                                 <rect key="frame" x="8" y="147" width="359" height="40"/>
@@ -419,9 +422,10 @@
                                                     <constraint firstAttribute="height" constant="60" id="JjE-qi-kTg"/>
                                                     <constraint firstAttribute="width" constant="60" id="NQM-Tp-9gh"/>
                                                 </constraints>
-                                                <state key="normal" image="Confirm">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
+                                                <state key="normal" title="okButton" image="Confirm"/>
+                                                <connections>
+                                                    <action selector="doneButton:" destination="wHr-yN-4db" eventType="touchUpInside" id="PZu-pC-5pH"/>
+                                                </connections>
                                             </button>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select Company" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0pW-Hm-7TV">
                                                 <rect key="frame" x="8" y="348" width="351" height="32"/>
@@ -512,6 +516,12 @@
                         <viewLayoutGuide key="safeArea" id="srV-vL-b5W"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="HomeIcon" selectedImage="HomeIcon" id="K12-oE-cNj"/>
+                    <connections>
+                        <outlet property="tsCompany" destination="0pW-Hm-7TV" id="1zH-g9-hYx"/>
+                        <outlet property="tsDate" destination="1FB-FN-tCl" id="Tfq-OV-roV"/>
+                        <outlet property="tsHour" destination="Fe6-5w-P2a" id="jyB-Fy-FJ6"/>
+                        <outlet property="tsMinute" destination="zDJ-a8-fp4" id="5Hp-9C-mMl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JdV-Dg-rFK" sceneMemberID="firstResponder"/>
             </objects>
@@ -1124,6 +1134,6 @@
         <image name="TimeSheetIcon" width="20" height="20"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="avY-R8-f6z"/>
+        <segue reference="bbn-6f-f4k"/>
     </inferredMetricsTieBreakers>
 </document>
