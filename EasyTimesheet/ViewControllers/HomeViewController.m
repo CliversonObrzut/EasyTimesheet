@@ -70,4 +70,23 @@
 }
 - (IBAction)doneButton:(id)sender {
 }
+- (IBAction)logoutButton:(id)sender {
+    @try{
+        NSError *signOutError;
+        BOOL status = [[FIRAuth auth] signOut:&signOutError];
+        
+        if (!status) {
+            AlertsViewController *alertError = [[AlertsViewController alloc]init];
+            [alertError displayAlertMessage: [NSString stringWithFormat:@"%@ %@", const_error_sign_out, signOutError]];
+            
+            return;
+        }else{
+            [self performSegueWithIdentifier:@"logout_identifier_segue" sender:nil];
+        }
+    }
+    @catch(NSException *ex){
+        AlertsViewController *alertError = [[AlertsViewController alloc]init];
+        [alertError displayAlertMessage: [NSString stringWithFormat:@"%@", [ex reason]]];
+    }
+}
 @end

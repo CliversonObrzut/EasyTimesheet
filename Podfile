@@ -8,5 +8,5 @@ target 'EasyTimesheet' do
   # Pods for EasyTimesheet
 pod 'Firebase/Core'
 pod 'Firebase/Firestore'
-pod 'FirebaseUI/Auth'
+pod 'Firebase/Auth'
 end

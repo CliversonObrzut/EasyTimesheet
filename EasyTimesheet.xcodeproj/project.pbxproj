@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		521F01B1216B68970055C9BF /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 521F01B0216B68970055C9BF /* Podfile */; };
+		521F01BD216B73E90055C9BF /* AlertsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 521F01BB216B73E90055C9BF /* AlertsViewController.m */; };
+		521F01C0216B742C0055C9BF /* CustomTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 521F01BE216B742C0055C9BF /* CustomTextField.m */; };
 		52760F642169DDD800797CF3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52760F632169DDD800797CF3 /* GoogleService-Info.plist */; };
 		52B94447215100A100007199 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B94446215100A100007199 /* AppDelegate.m */; };
 		52B9444A215100A100007199 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B94449215100A100007199 /* ViewController.m */; };
@@ -28,6 +31,11 @@
 
 /* Begin PBXFileReference section */
 		4C8FE6629BA967C73EA1F1B6 /* Pods-EasyTimesheet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyTimesheet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EasyTimesheet/Pods-EasyTimesheet.debug.xcconfig"; sourceTree = "<group>"; };
+		521F01B0216B68970055C9BF /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		521F01BB216B73E90055C9BF /* AlertsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertsViewController.m; sourceTree = "<group>"; };
+		521F01BC216B73E90055C9BF /* AlertsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertsViewController.h; sourceTree = "<group>"; };
+		521F01BE216B742C0055C9BF /* CustomTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTextField.m; sourceTree = "<group>"; };
+		521F01BF216B742C0055C9BF /* CustomTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTextField.h; sourceTree = "<group>"; };
 		52760F632169DDD800797CF3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		52B94442215100A100007199 /* EasyTimesheet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyTimesheet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52B94445215100A100007199 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -81,9 +89,28 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		521F01B2216B70A60055C9BF /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				521F01BF216B742C0055C9BF /* CustomTextField.h */,
+				521F01BE216B742C0055C9BF /* CustomTextField.m */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		521F01B7216B72980055C9BF /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				521F01BC216B73E90055C9BF /* AlertsViewController.h */,
+				521F01BB216B73E90055C9BF /* AlertsViewController.m */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
 		52B94439215100A100007199 = {
 			isa = PBXGroup;
 			children = (
+				521F01B0216B68970055C9BF /* Podfile */,
 				52B94444215100A100007199 /* EasyTimesheet */,
 				52B94443215100A100007199 /* Products */,
 				3A79ECFF1105913B8518BD9F /* Pods */,
@@ -102,6 +129,8 @@
 		52B94444215100A100007199 /* EasyTimesheet */ = {
 			isa = PBXGroup;
 			children = (
+				521F01B7216B72980055C9BF /* Alert */,
+				521F01B2216B70A60055C9BF /* Custom */,
 				52760F632169DDD800797CF3 /* GoogleService-Info.plist */,
 				52D3426C215501CF00A579EF /* ViewControllers */,
 				52D3425E2154F61A00A579EF /* TableViewTimeSheet */,
@@ -217,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52B94452215100A300007199 /* LaunchScreen.storyboard in Resources */,
+				521F01B1216B68970055C9BF /* Podfile in Resources */,
 				52B9444F215100A300007199 /* Assets.xcassets in Resources */,
 				52760F642169DDD800797CF3 /* GoogleService-Info.plist in Resources */,
 				52D3426B2154F6BF00A579EF /* TimeSheetTableViewCell.xib in Resources */,
@@ -232,18 +262,12 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-EasyTimesheet/Pods-EasyTimesheet-resources.sh",
-				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAuthUI.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/gRPC/gRPCCertificates.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAuthUI.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/gRPCCertificates.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,15 +280,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-EasyTimesheet-checkManifestLockResult.txt",
 			);
@@ -284,6 +304,8 @@
 				52D3427E2155039900A579EF /* CompanyTableViewController.m in Sources */,
 				52D34275215502B000A579EF /* TimesheetTableViewController.m in Sources */,
 				52B9444A215100A100007199 /* ViewController.m in Sources */,
+				521F01C0216B742C0055C9BF /* CustomTextField.m in Sources */,
+				521F01BD216B73E90055C9BF /* AlertsViewController.m in Sources */,
 				52D3427B2155036800A579EF /* CompanyCRUDViewController.m in Sources */,
 				52B94455215100A300007199 /* main.m in Sources */,
 				52D3426A2154F6BF00A579EF /* TimeSheetTableViewCell.m in Sources */,

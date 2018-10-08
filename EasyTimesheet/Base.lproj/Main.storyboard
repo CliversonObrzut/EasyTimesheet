@@ -74,7 +74,7 @@
                                                     <color key="titleColor" red="0.50196078430000002" green="0.79607843140000001" blue="0.79215686269999996" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="RegisterButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XB7-Hj-juQ"/>
+                                                    <action selector="RegisterNavButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="peo-wx-hxi"/>
                                                     <segue destination="Y3B-8c-qF2" kind="show" identifier="register_identifier_segue" id="Nws-YO-I1W"/>
                                                 </connections>
                                             </button>
@@ -494,7 +494,15 @@
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </textAttributes>
                                         <items>
-                                            <navigationItem title="HOME" id="Ko1-hW-5Ux"/>
+                                            <navigationItem title="HOME" id="Ko1-hW-5Ux">
+                                                <barButtonItem key="rightBarButtonItem" title="LogOut" id="4KE-d4-PWF">
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <connections>
+                                                        <action selector="logoutButton:" destination="wHr-yN-4db" id="Rde-dB-buR"/>
+                                                        <segue destination="BYZ-38-t0r" kind="show" identifier="logout_identifier_segue" id="jiH-Q0-fXG"/>
+                                                    </connections>
+                                                </barButtonItem>
+                                            </navigationItem>
                                         </items>
                                     </navigationBar>
                                 </subviews>
@@ -1141,5 +1149,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="avY-R8-f6z"/>
+        <segue reference="jiH-Q0-fXG"/>
     </inferredMetricsTieBreakers>
 </document>

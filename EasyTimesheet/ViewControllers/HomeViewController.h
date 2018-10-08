@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AlertsViewController.h"
+@import Firebase;
 
 @interface HomeViewController : UIViewController
+- (IBAction)logoutButton:(id)sender;
 @property (weak, nonatomic) IBOutlet UITextField *tsDate;
 @property (weak, nonatomic) IBOutlet UITextField *tsHour;
 @property (weak, nonatomic) IBOutlet UITextField *tsMinute;
@@ -17,6 +20,6 @@
 - (IBAction)doneButton:(id)sender;
 @property UIDatePicker *datePicker;
 @property UIDatePicker *timePicker;
-@property UIDatePicker *cohmpanyPicker;
+@property UIDatePicker *companyPicker;
 
 @end

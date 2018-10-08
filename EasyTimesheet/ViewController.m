@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+@import Firebase;
 
 @interface ViewController ()
 
@@ -14,37 +15,167 @@
 
 @implementation ViewController
 
-@synthesize db, handle;
+//Class ENUMS
+typedef NS_ENUM(NSInteger, login_view_){
+    login_view_enum_dispatch_time = 1
+};
+
+@synthesize db, handle, emailTextField, passwordTextField, loadingActivity;
 
 - (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:<#animated#>];
-    
-    self.handle = [[FIRAuth auth] addAuthStateDidChangeListener:^(FIRAuth * _Nonnull auth, FIRUser * _Nullable user) {
-        if(!user) {
-            
-        }
-    }];
+    //[super viewWillAppear:<#animated#>];
+    @try{
+        //Hide Activity Indicator
+        loadingActivity.hidden = YES;
+        
+        /*self.handle = [[FIRAuth auth] addAuthStateDidChangeListener:^(FIRAuth * _Nonnull auth, FIRUser * _Nullable user) {
+            if(auth.currentUser) {
+                [self performSegueWithIdentifier:(@"login_identifier_segue") sender:self];
+            }
+        }];*/
+    }
+    @catch(NSException *ex){
+        AlertsViewController *alertError = [[AlertsViewController alloc] init];
+        [alertError displayAlertMessage: [NSString stringWithFormat:@"%@", [ex reason]]];
+    }
 }
 
+-(void)viewWillDisappear:(BOOL)animated {
+    /*self.handle = [[FIRAuth auth] removeAuthStateDidChangeListener:(FIRAuthStateDidChangeListenerHandle):handle];*/
+}
+/**
+ *
+ * Customise to dismiss keyboard
+ * @author Cliverson Obrzut
+ *
+ */
 - (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    self.db = [FIRFirestore firestore];
-    
+    @try{
+        [super viewDidLoad];
+        self.db = [FIRFirestore firestore];
+        
+        //Tap gesture to dismiss keyboard
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
+                                       initWithTarget:self
+                                       action:@selector(dismissKeyboard)];
+        
+        [self.view addGestureRecognizer:tap];
+    }
+    @catch(NSException *ex){
+        AlertsViewController *alertError = [[AlertsViewController alloc] init];
+        [alertError displayAlertMessage: [NSString stringWithFormat:@"%@", [ex reason]]];
+    }
 }
 
+/**
+ *
+ * Method to dismiss keyboard
+ * @author Cliverson Obrzut
+ *
+ */
+-(void)dismissKeyboard {
+    @try{
+        [emailTextField resignFirstResponder];
+        [passwordTextField resignFirstResponder];
+    }
+    @catch(NSException *ex){
+        AlertsViewController *alertError = [[AlertsViewController alloc] init];
+        [alertError displayAlertMessage: [NSString stringWithFormat:@"%@", [ex reason]]];
+    }
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Buttons
 
 - (IBAction)LoginButton:(id)sender {
-    
+    @try{
+        if([emailTextField.text isEqualToString:@""]){
+            AlertsViewController *customAlert = [[AlertsViewController alloc] init];
+            [customAlert displayInputAlert: [emailTextField placeholder]];
+        }
+        else if([passwordTextField.text isEqualToString:@""]){
+            AlertsViewController *customAlert = [[AlertsViewController alloc] init];
+            [customAlert displayInputAlert: [passwordTextField placeholder]];
+        }
+        else{
+            //Regex Validation form Email
+            NSString *regexEmailPattern = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
+            NSString *emailInput = [emailTextField text];
+            NSRange emailRange = NSMakeRange(0, [emailInput length]);
+            NSError *error = nil;
+            
+            NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:regexEmailPattern options:0 error:&error];
+            
+            NSTextCheckingResult *emailMatch = [regex firstMatchInString:emailInput options:0 range:emailRange];
+            
+            if(emailMatch){
+                
+                //Disable button
+                UIButton *btn = (UIButton *)sender;
+                btn.enabled = NO;
+                
+                //Show Activity Indicator
+                loadingActivity.hidden = NO;
+                [loadingActivity startAnimating];
+                
+                //Perform login
+                
+                [[FIRAuth auth]
+                 signInWithEmail:emailTextField.text
+                 password:passwordTextField.text
+                 completion:^(FIRAuthDataResult * _Nullable authResult, NSError * _Nullable error) {
+                     
+                     //Wait 1 second to stop loading activity,
+                     //as the result from firebase may take time..
+                     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(login_view_enum_dispatch_time * NSEC_PER_SEC)),
+                                    dispatch_get_main_queue(),
+                                    ^{
+                                        //Stop and hide Activity Indicator
+                                        self.loadingActivity.hidden = YES;
+                                        [self.loadingActivity stopAnimating];
+                                        
+                                        if(authResult.user.email == emailInput){
+                                            [self performSegueWithIdentifier:@"login_identifier_segue" sender:self];
+                                        }
+                                        else{
+                                            //Enable button
+                                            UIButton *btn = (UIButton *)sender;
+                                            btn.enabled = YES;
+                                            
+                                            AlertsViewController *alertError = [[AlertsViewController alloc] init];
+                                            [alertError displayAlertMessage: [NSString stringWithFormat:@"%@", error.localizedDescription]];
+                                        }
+                                    });
+                 }];
+            }
+            else{
+                self.loadingActivity.hidden = YES;
+                [self.loadingActivity stopAnimating];
+                
+                //Invalid Email
+                AlertsViewController *errAlert = [[AlertsViewController alloc] init];
+                [errAlert displayAlertMessage:const_invalid_email_alert_message];
+            }
+        }
+    }
+    @catch(NSException *ex){
+        //Enable button
+        UIButton *btn = (UIButton *)sender;
+        btn.enabled = YES;
+        
+        //Stop and hide Activity Indicator
+        loadingActivity.hidden = YES;
+        [loadingActivity stopAnimating];
+        
+        AlertsViewController *alertError = [[AlertsViewController alloc] init];
+        [alertError displayAlertMessage: [NSString stringWithFormat:@"%@", [ex reason]]];
+    }
 }
 
 - (IBAction)RegisterNavButton:(id)sender {
-    
+        [self performSegueWithIdentifier:@"register_identifier_segue" sender:self];
 }
 @end
