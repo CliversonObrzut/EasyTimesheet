@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Item-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
@@ -62,7 +62,6 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="LoginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YNR-uL-f3u"/>
-                                                    <segue destination="hsN-4i-lJz" kind="show" identifier="login_identifier_segue" id="avY-R8-f6z"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UJW-ib-7SE">
@@ -75,17 +74,25 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="RegisterNavButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="peo-wx-hxi"/>
-                                                    <segue destination="Y3B-8c-qF2" kind="show" identifier="register_identifier_segue" id="Nws-YO-I1W"/>
                                                 </connections>
                                             </button>
+                                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="5Dm-Zw-tOG">
+                                                <rect key="frame" x="169" y="442" width="37" height="37"/>
+                                                <color key="tintColor" red="0.50196078430000002" green="0.79607843140000001" blue="0.79215686269999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="color" red="0.23137254900000001" green="0.56470588239999997" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            </activityIndicatorView>
                                         </subviews>
                                         <color key="backgroundColor" red="0.90973705053329468" green="0.90984302759170532" blue="0.90968823432922363" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
+                                            <constraint firstItem="5Dm-Zw-tOG" firstAttribute="top" secondItem="UJW-ib-7SE" secondAttribute="bottom" constant="41" id="0id-n6-w2U"/>
                                             <constraint firstAttribute="trailing" secondItem="UJW-ib-7SE" secondAttribute="trailing" constant="8" id="25g-zh-doy"/>
                                             <constraint firstItem="joT-W9-SbL" firstAttribute="leading" secondItem="eGk-Fo-xV7" secondAttribute="leading" constant="8" id="2Zp-uZ-qR5"/>
                                             <constraint firstItem="UJW-ib-7SE" firstAttribute="leading" secondItem="eGk-Fo-xV7" secondAttribute="leading" constant="8" id="9Ir-lY-TiS"/>
                                             <constraint firstItem="UJW-ib-7SE" firstAttribute="top" secondItem="1kV-bc-d02" secondAttribute="bottom" constant="41" id="D5H-jQ-fJX"/>
+                                            <constraint firstAttribute="trailing" secondItem="5Dm-Zw-tOG" secondAttribute="trailing" constant="169" id="Eop-Lc-8DQ"/>
                                             <constraint firstItem="1kV-bc-d02" firstAttribute="top" secondItem="Aw7-J1-IJA" secondAttribute="bottom" constant="42" id="FTb-2r-UfR"/>
+                                            <constraint firstAttribute="bottom" secondItem="5Dm-Zw-tOG" secondAttribute="bottom" constant="184" id="JZS-B4-0d4"/>
+                                            <constraint firstItem="5Dm-Zw-tOG" firstAttribute="centerX" secondItem="eGk-Fo-xV7" secondAttribute="centerX" id="KR3-XM-u65"/>
                                             <constraint firstAttribute="trailing" secondItem="joT-W9-SbL" secondAttribute="trailing" constant="8" id="KcE-Pf-vts"/>
                                             <constraint firstItem="Aw7-J1-IJA" firstAttribute="leading" secondItem="eGk-Fo-xV7" secondAttribute="leading" constant="8" id="Kn4-OB-Z2x"/>
                                             <constraint firstItem="IG6-ll-xn7" firstAttribute="leading" secondItem="eGk-Fo-xV7" secondAttribute="leading" constant="8" id="LEi-qE-You"/>
@@ -95,8 +102,10 @@
                                             <constraint firstAttribute="trailing" secondItem="HVR-ic-geY" secondAttribute="trailing" constant="8" id="hdi-Ae-rWO"/>
                                             <constraint firstItem="HVR-ic-geY" firstAttribute="leading" secondItem="eGk-Fo-xV7" secondAttribute="leading" constant="8" id="id0-ad-IV8"/>
                                             <constraint firstItem="HVR-ic-geY" firstAttribute="top" secondItem="IG6-ll-xn7" secondAttribute="bottom" constant="23" id="mqa-SR-zbY"/>
+                                            <constraint firstItem="UJW-ib-7SE" firstAttribute="centerX" secondItem="eGk-Fo-xV7" secondAttribute="centerX" id="oYM-gu-2iz"/>
                                             <constraint firstAttribute="trailing" secondItem="Aw7-J1-IJA" secondAttribute="trailing" constant="8" id="obb-yI-HJ7"/>
                                             <constraint firstItem="Aw7-J1-IJA" firstAttribute="top" secondItem="joT-W9-SbL" secondAttribute="bottom" constant="23" id="qI3-Z5-CAV"/>
+                                            <constraint firstItem="5Dm-Zw-tOG" firstAttribute="leading" secondItem="eGk-Fo-xV7" secondAttribute="leading" constant="169" id="rZL-Eu-IGS"/>
                                             <constraint firstItem="joT-W9-SbL" firstAttribute="top" secondItem="HVR-ic-geY" secondAttribute="bottom" constant="23" id="tpS-hq-RBP"/>
                                         </constraints>
                                     </view>
@@ -126,7 +135,7 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" red="0.53333333333333333" green="0.84705882352941175" blue="0.84313725490196079" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.50196078430000002" green="0.79607843140000001" blue="0.79215686269999996" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="leo-Yh-xFn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="YZL-Wf-Emp"/>
                             <constraint firstAttribute="bottom" secondItem="leo-Yh-xFn" secondAttribute="bottom" id="ajm-UR-tq5"/>
@@ -135,14 +144,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="Gqh-dP-1vi"/>
                     <connections>
                         <outlet property="emailTextField" destination="HVR-ic-geY" id="4xu-6D-8ah"/>
+                        <outlet property="loadingActivity" destination="5Dm-Zw-tOG" id="3cz-y8-ixn"/>
                         <outlet property="passwordTextField" destination="Aw7-J1-IJA" id="NDW-Ib-0eX"/>
+                        <segue destination="hsN-4i-lJz" kind="show" identifier="login_identifier_segue" id="zic-2h-r25"/>
+                        <segue destination="Y3B-8c-qF2" kind="show" identifier="register_nav_identifier_segue" id="itv-SE-8qA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="424.80000000000001" y="33.733133433283363"/>
+            <point key="canvasLocation" x="386" y="34"/>
         </scene>
         <!--TIMESHEET-->
         <scene sceneID="nvF-IE-WLf">
@@ -172,12 +185,14 @@
                         <barButtonItem key="leftBarButtonItem" systemItem="edit" id="cuV-xH-9VR">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <segue destination="egM-t7-dhS" kind="show" identifier="timesheet_edit_timesheet_segue" id="2tG-YL-4Ct"/>
+                                <action selector="editButton:" destination="74Y-4y-L4y" id="D9a-0T-5g7"/>
+                                <segue destination="egM-t7-dhS" kind="show" identifier="edit_timesheet_segue_identifier" id="2tG-YL-4Ct"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="FilterIcon" id="s1L-Fm-orM">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
+                                <action selector="filterButton:" destination="74Y-4y-L4y" id="o4T-Pg-MCv"/>
                                 <segue destination="e0t-On-G4m" kind="show" identifier="timesheet_filter_identifier_segue" id="Gjo-4f-jby"/>
                             </connections>
                         </barButtonItem>
@@ -191,7 +206,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="2YG-bF-DEH">
             <objects>
-                <tabBarController modalTransitionStyle="flipHorizontal" id="hsN-4i-lJz" sceneMemberID="viewController">
+                <tabBarController id="hsN-4i-lJz" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dbc-AT-71b">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -238,6 +253,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="R1O-WY-uMj">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
+                                <action selector="addCompanyButton:" destination="ize-Td-v9F" id="h6d-IZ-rlC"/>
                                 <segue destination="SkO-vP-TWm" kind="show" identifier="company_crud_identifier_segue" id="vWk-c2-pcB"/>
                             </connections>
                         </barButtonItem>
@@ -278,7 +294,7 @@
                                                 <rect key="frame" x="8" y="208" width="359" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qsW-oG-2Sb">
                                                 <rect key="frame" x="8" y="67" width="359" height="21"/>
@@ -298,19 +314,28 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="hsN-4i-lJz" kind="show" identifier="register_login_identifier_segue" id="bbn-6f-f4k"/>
+                                                    <action selector="registerButton:" destination="Y3B-8c-qF2" eventType="touchUpInside" id="zxs-vl-YXe"/>
                                                 </connections>
                                             </button>
+                                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="ZiZ-hu-LlZ">
+                                                <rect key="frame" x="169" y="362" width="37" height="37"/>
+                                                <color key="color" red="0.23137254900000001" green="0.56470588239999997" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            </activityIndicatorView>
                                         </subviews>
                                         <color key="backgroundColor" red="0.90973705049999998" green="0.90984302760000002" blue="0.90968823430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="uq5-uS-ZIl" firstAttribute="top" secondItem="dq3-Hb-opw" secondAttribute="bottom" constant="23" id="463-Dz-PV8"/>
                                             <constraint firstAttribute="bottom" secondItem="Pt2-0f-4bf" secondAttribute="bottom" constant="327" id="4b0-m1-Rc6"/>
+                                            <constraint firstItem="ZiZ-hu-LlZ" firstAttribute="leading" secondItem="4sf-Vd-Is7" secondAttribute="leading" constant="169" id="93N-Mv-kaW"/>
+                                            <constraint firstItem="ZiZ-hu-LlZ" firstAttribute="top" secondItem="Pt2-0f-4bf" secondAttribute="bottom" constant="42" id="BGy-T5-D8D"/>
                                             <constraint firstItem="Pt2-0f-4bf" firstAttribute="centerX" secondItem="4sf-Vd-Is7" secondAttribute="centerX" id="BrA-Gr-2LQ"/>
+                                            <constraint firstItem="ZiZ-hu-LlZ" firstAttribute="centerX" secondItem="4sf-Vd-Is7" secondAttribute="centerX" id="CHo-Cu-m74"/>
                                             <constraint firstAttribute="trailing" secondItem="uq5-uS-ZIl" secondAttribute="trailing" constant="8" id="FtI-cp-iRx"/>
                                             <constraint firstAttribute="trailing" secondItem="Thn-7i-AnI" secondAttribute="trailing" constant="8" id="I7F-de-zBL"/>
                                             <constraint firstItem="qsW-oG-2Sb" firstAttribute="leading" secondItem="4sf-Vd-Is7" secondAttribute="leading" constant="8" id="IVU-oh-aVh"/>
+                                            <constraint firstAttribute="trailing" secondItem="ZiZ-hu-LlZ" secondAttribute="trailing" constant="169" id="LnB-Vi-Lg5"/>
                                             <constraint firstItem="Thn-7i-AnI" firstAttribute="top" secondItem="qsW-oG-2Sb" secondAttribute="bottom" constant="23" id="U4w-KO-doe"/>
+                                            <constraint firstAttribute="bottom" secondItem="ZiZ-hu-LlZ" secondAttribute="bottom" constant="248" id="g5c-L8-fOh"/>
                                             <constraint firstItem="dq3-Hb-opw" firstAttribute="top" secondItem="Thn-7i-AnI" secondAttribute="bottom" constant="23" id="gIp-bk-Uce"/>
                                             <constraint firstItem="dq3-Hb-opw" firstAttribute="leading" secondItem="4sf-Vd-Is7" secondAttribute="leading" constant="8" id="hax-je-Ije"/>
                                             <constraint firstItem="Pt2-0f-4bf" firstAttribute="top" secondItem="uq5-uS-ZIl" secondAttribute="bottom" constant="42" id="j54-pe-cSL"/>
@@ -332,9 +357,7 @@
                                                 <barButtonItem key="leftBarButtonItem" title="Cancel" id="7V9-o7-aUU">
                                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <connections>
-                                                        <segue destination="BYZ-38-t0r" kind="popoverPresentation" identifier="register_back_identifier_segue" popoverAnchorBarButtonItem="7V9-o7-aUU" id="079-hx-Kgr">
-                                                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                                        </segue>
+                                                        <action selector="cancelButton:" destination="Y3B-8c-qF2" id="0hn-QN-VQr"/>
                                                     </connections>
                                                 </barButtonItem>
                                             </navigationItem>
@@ -363,6 +386,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hT9-ye-LDh"/>
                     </view>
+                    <connections>
+                        <outlet property="emailRegTextField" destination="Thn-7i-AnI" id="Fj3-h0-Fxc"/>
+                        <outlet property="loadingActivity" destination="ZiZ-hu-LlZ" id="wPj-vm-NVs"/>
+                        <outlet property="passwordRegTextField" destination="uq5-uS-ZIl" id="mox-Me-zkG"/>
+                        <segue destination="hsN-4i-lJz" kind="show" identifier="register_identifier_segue" id="Hzz-cZ-53D"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="register_back_identifier_segue" id="GWz-2t-vos"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eQx-UU-QTI" sceneMemberID="firstResponder"/>
             </objects>
@@ -499,7 +529,6 @@
                                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <connections>
                                                         <action selector="logoutButton:" destination="wHr-yN-4db" id="Rde-dB-buR"/>
-                                                        <segue destination="BYZ-38-t0r" kind="show" identifier="logout_identifier_segue" id="jiH-Q0-fXG"/>
                                                     </connections>
                                                 </barButtonItem>
                                             </navigationItem>
@@ -535,6 +564,7 @@
                         <outlet property="tsDate" destination="1FB-FN-tCl" id="Tfq-OV-roV"/>
                         <outlet property="tsHour" destination="Fe6-5w-P2a" id="jyB-Fy-FJ6"/>
                         <outlet property="tsMinute" destination="zDJ-a8-fp4" id="5Hp-9C-mMl"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="logout_identifier_segue" id="mDL-17-LtS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JdV-Dg-rFK" sceneMemberID="firstResponder"/>
@@ -645,6 +675,9 @@
                                                 <state key="normal" title="SAVE">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="saveButton:" destination="SkO-vP-TWm" eventType="touchUpInside" id="VgV-ne-ufd"/>
+                                                </connections>
                                             </button>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="25.00" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fkJ-oy-Be8">
                                                 <rect key="frame" x="56" y="306" width="108" height="30"/>
@@ -820,6 +853,17 @@
                         <viewLayoutGuide key="safeArea" id="HfL-0c-MDW"/>
                     </view>
                     <navigationItem key="navigationItem" title="ADD COMPANY" id="aR4-0E-q9a"/>
+                    <connections>
+                        <outlet property="companyTextField" destination="NcE-2C-lXJ" id="TDU-fC-ZQh"/>
+                        <outlet property="friTextField" destination="tXb-DI-5E9" id="21N-Km-8pm"/>
+                        <outlet property="monTextField" destination="GGs-ue-LLN" id="aKM-II-TAi"/>
+                        <outlet property="satTextField" destination="rx4-Cd-gB5" id="Pho-al-Lgy"/>
+                        <outlet property="startDateTextField" destination="YZJ-aT-clw" id="diq-Dt-XRR"/>
+                        <outlet property="sunTextField" destination="Gyg-oH-vZP" id="DSv-Bh-ZHI"/>
+                        <outlet property="thuTextField" destination="OAy-SB-72J" id="wNQ-wK-IIw"/>
+                        <outlet property="tueTextField" destination="fkJ-oy-Be8" id="ncb-DB-fkv"/>
+                        <outlet property="wedTextField" destination="e9x-VH-oqV" id="cSg-WE-4iJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tkE-zO-KVZ" sceneMemberID="firstResponder"/>
             </objects>
@@ -873,6 +917,9 @@
                                                 <state key="normal" title="SEARCH">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="SearchButton:" destination="e0t-On-G4m" eventType="touchUpInside" id="Kii-kX-WDx"/>
+                                                </connections>
                                             </button>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="End Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jzn-rM-GjW">
                                                 <rect key="frame" x="197" y="171" width="170" height="30"/>
@@ -926,6 +973,11 @@
                         <viewLayoutGuide key="safeArea" id="lae-hn-HNM"/>
                     </view>
                     <navigationItem key="navigationItem" title="FILTER" id="3AL-qa-fYu"/>
+                    <connections>
+                        <outlet property="companyTextField" destination="Ud9-K7-qDk" id="RBH-KI-Z3X"/>
+                        <outlet property="endDateTextField" destination="jzn-rM-GjW" id="eV5-DN-uND"/>
+                        <outlet property="startDateTextField" destination="njq-EZ-tuY" id="f2H-Ce-inN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VaZ-hx-7tz" sceneMemberID="firstResponder"/>
             </objects>
@@ -1041,6 +1093,9 @@
                                                 <state key="normal" title="DELETE">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="deleteButton:" destination="egM-t7-dhS" eventType="touchUpInside" id="ecr-6P-d01"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EsV-Lx-H39">
                                                 <rect key="frame" x="204" y="438" width="160" height="40"/>
@@ -1051,6 +1106,9 @@
                                                 <state key="normal" title="SAVE">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="saveButton:" destination="egM-t7-dhS" eventType="touchUpInside" id="gVI-kC-UfC"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.90973705049999998" green="0.90984302760000002" blue="0.90968823430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1134,6 +1192,15 @@
                         <viewLayoutGuide key="safeArea" id="nb7-Gz-6jW"/>
                     </view>
                     <navigationItem key="navigationItem" title="EDIT TIMESHEET" id="DuJ-gd-yjq"/>
+                    <connections>
+                        <outlet property="companyTextField" destination="nry-nk-BPG" id="xgz-3u-EAc"/>
+                        <outlet property="dayRateTextField" destination="CN7-ZE-OqU" id="pa0-Yj-sTi"/>
+                        <outlet property="endHourTextField" destination="jX4-mZ-4V5" id="Oky-XD-a5l"/>
+                        <outlet property="endMinuteTextField" destination="JHi-6p-n6p" id="RH2-tn-H7Q"/>
+                        <outlet property="startHourTextField" destination="s5h-FB-b4P" id="wrC-QE-H7g"/>
+                        <outlet property="startMinuteTextField" destination="keG-NT-4fZ" id="tik-fB-pRN"/>
+                        <outlet property="workedDate" destination="RBN-qa-qC6" id="ODS-Kz-Ok2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5TN-z4-SEH" sceneMemberID="firstResponder"/>
             </objects>
@@ -1148,7 +1215,7 @@
         <image name="TimeSheetIcon" width="20" height="20"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="avY-R8-f6z"/>
-        <segue reference="jiH-Q0-fXG"/>
+        <segue reference="Hzz-cZ-53D"/>
+        <segue reference="GWz-2t-vos"/>
     </inferredMetricsTieBreakers>
 </document>

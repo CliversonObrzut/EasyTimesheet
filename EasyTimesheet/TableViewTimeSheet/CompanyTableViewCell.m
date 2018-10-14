@@ -1,21 +1,14 @@
 //
-//  TimeSheetTableViewCell.m
+//  CompanyTableViewCell.m
 //  EasyTimesheet
 //
-//  Created by Cliverson Obrzut on 21/9/18.
+//  Created by Cliverson Obrzut on 14/10/18.
 //  Copyright © 2018 Cliverson Obrzut. All rights reserved.
 //
 
-#import "TimeSheetTableViewCell.h"
+#import "CompanyTableViewCell.h"
 
-@implementation TimeSheetTableViewCell
-
-@synthesize amountLabel,
-grossPayLabel,
-dayRateLabel,
-companyNameLabel,
-startEndLabel,
-dateLabel;
+@implementation CompanyTableViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -26,10 +19,6 @@ dateLabel;
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
-}
-
-- (IBAction)editButton:(id)sender {
-    
 }
 
 @end

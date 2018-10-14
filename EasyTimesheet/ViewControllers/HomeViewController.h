@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "AlertsViewController.h"
+#import "DatabaseProvider.h"
 @import Firebase;
 
 @interface HomeViewController : UIViewController

@@ -14,6 +14,8 @@
 
 @implementation EditTimesheetViewController
 
+@synthesize companyTextField, workedDate, startHourTextField, startMinuteTextField, endHourTextField, endMinuteTextField, dayRateTextField, timesheetSegue;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -34,4 +36,13 @@
 }
 */
 
+#pragma mark - Buttons
+
+- (IBAction)deleteButton:(id)sender {
+    // TODO
+}
+
+- (IBAction)saveButton:(id)sender {
+    // TODO
+}
 @end

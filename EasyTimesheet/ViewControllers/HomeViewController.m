@@ -16,8 +16,20 @@
 @synthesize tsDate, tsHour, tsMinute, tsCompany, datePicker, timePicker;
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
-    [self setDatePicker];
+    @try {
+        [super viewDidLoad];
+        [self setDatePicker];
+        //Tap gesture to dismiss keyboard
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
+                                       initWithTarget:self
+                                       action:@selector(dismissKeyboardAndDatePicker)];
+        
+        [self.view addGestureRecognizer:tap];
+    }
+    @catch(NSException *ex){
+        AlertsViewController *alertError = [[AlertsViewController alloc] init];
+        [alertError displayAlertMessage: [NSString stringWithFormat:@"%@", [ex reason]]];
+    }
 }
 
 -(void) setDatePicker {
@@ -29,13 +41,16 @@
     
     [self.datePicker addTarget:self action:@selector(onDatePickerValueChanged:) forControlEvents:UIControlEventAllEvents];
     [self.timePicker addTarget:self action:@selector(onTimePickerValueChanged:) forControlEvents:UIControlEventAllEvents];
+    
     self.tsDate.inputView = self.datePicker;
     self.tsHour.inputView = self.timePicker;
     self.tsMinute.inputView = self.timePicker;
 }
+
 - (void) getDate {
-    
+    // TODO
 }
+
 - (void) onDatePickerValueChanged:(UIDatePicker *) datePicker {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
      [dateFormatter setDateFormat:@"dd/MM/yyyy"];
@@ -49,6 +64,25 @@
     [minuteFormatter setDateFormat:@"mm"];
     self.tsHour.text = [hourFormatter stringFromDate:timePicker.date];
     self.tsMinute.text = [minuteFormatter stringFromDate:timePicker.date];
+}
+
+/**
+ *
+ * Method to dismiss keyboard
+ * @author Cliverson Obrzut
+ *
+ */
+-(void)dismissKeyboardAndDatePicker {
+    @try{
+        [tsDate resignFirstResponder];
+        [tsHour resignFirstResponder];
+        [tsMinute resignFirstResponder];
+        [tsCompany resignFirstResponder];
+    }
+    @catch(NSException *ex){
+        AlertsViewController *alertError = [[AlertsViewController alloc] init];
+        [alertError displayAlertMessage: [NSString stringWithFormat:@"%@", [ex reason]]];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -67,8 +101,10 @@
 */
 
 - (IBAction)inOutSelector:(UISwitch *)sender {
+    // TODO
 }
 - (IBAction)doneButton:(id)sender {
+    // TODO
 }
 - (IBAction)logoutButton:(id)sender {
     @try{

@@ -14,6 +14,8 @@
 
 @implementation CompanyCRUDViewController
 
+@synthesize companyTextField, startDateTextField, monTextField, tueTextField, wedTextField, thuTextField, friTextField, satTextField, sunTextField;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -34,4 +36,7 @@
 }
 */
 
+- (IBAction)saveButton:(id)sender {
+    // TODO
+}
 @end

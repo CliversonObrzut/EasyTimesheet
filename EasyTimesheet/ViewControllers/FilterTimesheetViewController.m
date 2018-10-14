@@ -13,6 +13,7 @@
 @end
 
 @implementation FilterTimesheetViewController
+@synthesize companyTextField, startDateTextField, endDateTextField;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -34,4 +35,9 @@
 }
 */
 
+#pragma mark - Buttons
+
+- (IBAction)SearchButton:(id)sender {
+    // TODO
+}
 @end

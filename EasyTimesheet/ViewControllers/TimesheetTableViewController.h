@@ -7,7 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AlertsViewController.h"
+#import "DatabaseProvider.h"
+#import "TimesheetCell.h"
+#import "TimeSheetTableViewCell.h"
+#import "EditTimesheetViewController.h"
+@import Firebase;
 
 @interface TimesheetTableViewController : UITableViewController
+
+@property NSMutableArray *timesheetArray;
+- (IBAction)filterButton:(id)sender;
+- (IBAction)editButton:(id)sender;
 
 @end

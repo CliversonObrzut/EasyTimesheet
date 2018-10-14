@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface CompanyTableViewController : UITableViewController
+- (IBAction)addCompanyButton:(id)sender;
 
 @end

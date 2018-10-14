@@ -7,7 +7,6 @@
 //
 
 #import "ViewController.h"
-@import Firebase;
 
 @interface ViewController ()
 
@@ -20,19 +19,23 @@ typedef NS_ENUM(NSInteger, login_view_){
     login_view_enum_dispatch_time = 1
 };
 
-@synthesize db, handle, emailTextField, passwordTextField, loadingActivity;
+// Class contants
+NSString *const const_login_segue = @"login_identifier_segue";
+NSString *const const_register_segue = @"register_nav_identifier_segue";
+
+@synthesize handle, emailTextField, passwordTextField, loadingActivity;
 
 - (void)viewWillAppear:(BOOL)animated {
-    //[super viewWillAppear:<#animated#>];
-    @try{
+    @try {
         //Hide Activity Indicator
         loadingActivity.hidden = YES;
         
-        /*self.handle = [[FIRAuth auth] addAuthStateDidChangeListener:^(FIRAuth * _Nonnull auth, FIRUser * _Nullable user) {
+        // lisntener to redirect to home screen if user is still authenticated when launching the app.
+        self.handle = [[FIRAuth auth] addAuthStateDidChangeListener:^(FIRAuth * _Nonnull auth, FIRUser * _Nullable user) {
             if(auth.currentUser) {
-                [self performSegueWithIdentifier:(@"login_identifier_segue") sender:self];
+                [self performSegueWithIdentifier:(const_login_segue) sender:self];
             }
-        }];*/
+        }];
     }
     @catch(NSException *ex){
         AlertsViewController *alertError = [[AlertsViewController alloc] init];
@@ -41,8 +44,9 @@ typedef NS_ENUM(NSInteger, login_view_){
 }
 
 -(void)viewWillDisappear:(BOOL)animated {
-    /*self.handle = [[FIRAuth auth] removeAuthStateDidChangeListener:(FIRAuthStateDidChangeListenerHandle):handle];*/
+    [[FIRAuth auth] removeAuthStateDidChangeListener:self.handle];
 }
+
 /**
  *
  * Customise to dismiss keyboard
@@ -52,7 +56,6 @@ typedef NS_ENUM(NSInteger, login_view_){
 - (void)viewDidLoad {
     @try{
         [super viewDidLoad];
-        self.db = [FIRFirestore firestore];
         
         //Tap gesture to dismiss keyboard
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
@@ -137,8 +140,8 @@ typedef NS_ENUM(NSInteger, login_view_){
                                         self.loadingActivity.hidden = YES;
                                         [self.loadingActivity stopAnimating];
                                         
-                                        if(authResult.user.email == emailInput){
-                                            [self performSegueWithIdentifier:@"login_identifier_segue" sender:self];
+                                        if(authResult){
+                                            [self performSegueWithIdentifier:const_login_segue sender:self];
                                         }
                                         else{
                                             //Enable button
@@ -176,6 +179,6 @@ typedef NS_ENUM(NSInteger, login_view_){
 }
 
 - (IBAction)RegisterNavButton:(id)sender {
-        [self performSegueWithIdentifier:@"register_identifier_segue" sender:self];
+        [self performSegueWithIdentifier:const_register_segue sender:self];
 }
 @end

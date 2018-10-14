@@ -14,14 +14,34 @@
 
 @implementation TimesheetTableViewController
 
+@synthesize timesheetArray;
+
+-(void)viewDidAppear:(BOOL)animated{
+    @try{
+        [super viewDidAppear:animated];
+        timesheetArray = [[NSMutableArray alloc]init];
+        
+        [self handleTimesheetArray];
+    }
+    @catch(NSException *ex){
+        AlertsViewController *alertError = [[AlertsViewController alloc]init];
+        [alertError displayAlertMessage: [NSString stringWithFormat:@"%@", [ex reason]]];
+    }
+}
+
 - (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    @try{
+        [super viewDidLoad];
+        
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+        
+        self.tableView.delegate = self;
+        self.tableView.dataSource = self;
+    }
+    @catch(NSException *ex){
+        AlertsViewController *alertError = [[AlertsViewController alloc]init];
+        [alertError displayAlertMessage: [NSString stringWithFormat:@"%@", [ex reason]]];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -29,35 +49,93 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void) handleTimesheetArray {
+    @try {
+        TimesheetCell *timesheetOne = [[TimesheetCell alloc] init];
+        [timesheetOne setCompany:@"AIT"];
+        [timesheetOne setWorkedDate:@"13/10/18"];
+        [timesheetOne setStartTime:@"08:00"];
+        [timesheetOne setEndTime:@"16:15"];
+        [timesheetOne setPayRate:@"$25.00"];
+        [timesheetOne setAmount:@"$206.25"];
+        
+        [self.timesheetArray addObject:timesheetOne];
+        
+        TimesheetCell *timesheetTwo = [[TimesheetCell alloc] init];
+        [timesheetTwo setCompany:@"AIT"];
+        [timesheetTwo setWorkedDate:@"14/10/18"];
+        [timesheetTwo setStartTime:@"09:00"];
+        [timesheetTwo setEndTime:@"16:30"];
+        [timesheetTwo setPayRate:@"$25.00"];
+        [timesheetTwo setAmount:@"$187.50"];
+        
+        [self.timesheetArray addObject:timesheetTwo];
+        
+        TimesheetCell *timesheetThree = [[TimesheetCell alloc] init];
+        [timesheetThree setCompany:@"AIT"];
+        [timesheetThree setWorkedDate:@"15/10/18"];
+        [timesheetThree setStartTime:@"07:00"];
+        [timesheetThree setEndTime:@"16:00"];
+        [timesheetThree setPayRate:@"$25.00"];
+        [timesheetThree setAmount:@"$225.00"];
+        
+        [self.timesheetArray addObject:timesheetThree];
+        
+        [self.tableView reloadData];
+    }
+    @catch(NSException *error) {
+        NSLog(@"Error loading timesheet data");
+    }
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    @try {
+        return [timesheetArray count];
+    }
+    @catch(NSException *ex){
+        AlertsViewController *alertError = [[AlertsViewController alloc]init];
+        [alertError displayAlertMessage: [NSString stringWithFormat:@"%@", [ex reason]]];
+    }
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
-    return cell;
+    @try{
+        static NSString *cellIdentifier = @"timhesheetCell";
+        
+        [self.tableView registerNib:[UINib nibWithNibName:@"TimeSheetTableViewCell" bundle:nil] forCellReuseIdentifier:cellIdentifier];
+        
+        TimeSheetTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
+        
+        //Details
+        [[cell dateLabel] setText:[NSString stringWithFormat:@"Date: %@", [[timesheetArray objectAtIndex:indexPath.row] workedDate]]];
+        [[cell startEndLabel] setText:[NSString stringWithFormat:@"Start: %@  End: %@", [[timesheetArray objectAtIndex:indexPath.row]startTime],[[timesheetArray objectAtIndex:indexPath.row]endTime]]];
+        [[cell companyNameLabel] setText:[NSString stringWithFormat:@"Company: %@", [[timesheetArray objectAtIndex:indexPath.row] company]]];
+        [[cell dayRateLabel] setText:[NSString stringWithFormat:@"Pay Rate: %@", [[timesheetArray objectAtIndex:indexPath.row] payRate]]];
+        [[cell amountLabel] setText:[NSString stringWithFormat:@"%@", [[timesheetArray objectAtIndex:indexPath.row] amount]]];
+        
+        //cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        
+        return cell;
+    }
+    @catch(NSException *ex){
+        AlertsViewController *alertError = [[AlertsViewController alloc]init];
+        [alertError displayAlertMessage: [NSString stringWithFormat:@"%@", [ex reason]]];
+    }
 }
-*/
 
-/*
+//
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     // Return NO if you do not want the specified item to be editable.
     return YES;
 }
-*/
 
 /*
 // Override to support editing the table view.
@@ -85,14 +163,42 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    @try{
+        [self performSegueWithIdentifier:@"edit_timesheet_segue_identifier" sender:self];
+    }
+    @catch(NSException *ex){
+        AlertsViewController *alertError = [[AlertsViewController alloc]init];
+        [alertError displayAlertMessage: [NSString stringWithFormat:@"%@", [ex reason]]];
+    }
 }
-*/
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    @try{
+        TimesheetCell *timesheet = [[TimesheetCell alloc] init];
+        
+        if ([segue.identifier isEqualToString:@"edit_timesheet_segue_identifier"])
+        {
+            timesheet = [timesheetArray objectAtIndex:self.tableView.indexPathForSelectedRow.row];
+            EditTimesheetViewController *viewController = segue.destinationViewController;
+            [viewController setTimesheetSegue:timesheet];
+        }
+    }
+    @catch(NSException *ex){
+        AlertsViewController *alertError = [[AlertsViewController alloc]init];
+        [alertError displayAlertMessage: [NSString stringWithFormat:@"%@", [ex reason]]];
+    }
+}
+
+
+- (IBAction)filterButton:(id)sender {
+    // TODO
+}
+
+- (IBAction)editButton:(id)sender {
+    // TODO
+}
 @end

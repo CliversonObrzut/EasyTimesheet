@@ -1,6 +1,6 @@
 //
 //  AlertsViewController.m
-//  MobbieApp
+//  EasyTimesheet
 //
 //  Created by Cliverson Obrzut on 07/10/18.
 //  Copyright © 2018 Cliverson Obrzut. All rights reserved.

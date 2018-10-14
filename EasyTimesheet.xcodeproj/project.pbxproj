@@ -7,9 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52185053216EE1E700BC520C /* DatabaseProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 52185052216EE1E700BC520C /* DatabaseProvider.m */; };
+		521850572171D6A700BC520C /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 521850562171D6A700BC520C /* UserModel.m */; };
+		5218505A2171D7E200BC520C /* Company.m in Sources */ = {isa = PBXBuildFile; fileRef = 521850592171D7E200BC520C /* Company.m */; };
+		5218505D2171D7FB00BC520C /* Timesheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 5218505C2171D7FB00BC520C /* Timesheet.m */; };
+		52185064217340E900BC520C /* CompanyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 52185062217340E900BC520C /* CompanyTableViewCell.m */; };
+		52185065217340E900BC520C /* CompanyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52185063217340E900BC520C /* CompanyTableViewCell.xib */; };
+		5218506821734E7900BC520C /* TimesheetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5218506721734E7900BC520C /* TimesheetCell.m */; };
 		521F01B1216B68970055C9BF /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 521F01B0216B68970055C9BF /* Podfile */; };
 		521F01BD216B73E90055C9BF /* AlertsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 521F01BB216B73E90055C9BF /* AlertsViewController.m */; };
-		521F01C0216B742C0055C9BF /* CustomTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 521F01BE216B742C0055C9BF /* CustomTextField.m */; };
 		52760F642169DDD800797CF3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52760F632169DDD800797CF3 /* GoogleService-Info.plist */; };
 		52B94447215100A100007199 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B94446215100A100007199 /* AppDelegate.m */; };
 		52B9444A215100A100007199 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B94449215100A100007199 /* ViewController.m */; };
@@ -31,11 +37,22 @@
 
 /* Begin PBXFileReference section */
 		4C8FE6629BA967C73EA1F1B6 /* Pods-EasyTimesheet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyTimesheet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EasyTimesheet/Pods-EasyTimesheet.debug.xcconfig"; sourceTree = "<group>"; };
+		52185051216EE1E700BC520C /* DatabaseProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DatabaseProvider.h; sourceTree = "<group>"; };
+		52185052216EE1E700BC520C /* DatabaseProvider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DatabaseProvider.m; sourceTree = "<group>"; };
+		521850552171D6A700BC520C /* UserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
+		521850562171D6A700BC520C /* UserModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
+		521850582171D7E100BC520C /* Company.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Company.h; sourceTree = "<group>"; };
+		521850592171D7E200BC520C /* Company.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Company.m; sourceTree = "<group>"; };
+		5218505B2171D7FB00BC520C /* Timesheet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Timesheet.h; sourceTree = "<group>"; };
+		5218505C2171D7FB00BC520C /* Timesheet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Timesheet.m; sourceTree = "<group>"; };
+		52185061217340E900BC520C /* CompanyTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CompanyTableViewCell.h; sourceTree = "<group>"; };
+		52185062217340E900BC520C /* CompanyTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CompanyTableViewCell.m; sourceTree = "<group>"; };
+		52185063217340E900BC520C /* CompanyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompanyTableViewCell.xib; sourceTree = "<group>"; };
+		5218506621734E7900BC520C /* TimesheetCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimesheetCell.h; sourceTree = "<group>"; };
+		5218506721734E7900BC520C /* TimesheetCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimesheetCell.m; sourceTree = "<group>"; };
 		521F01B0216B68970055C9BF /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		521F01BB216B73E90055C9BF /* AlertsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertsViewController.m; sourceTree = "<group>"; };
 		521F01BC216B73E90055C9BF /* AlertsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertsViewController.h; sourceTree = "<group>"; };
-		521F01BE216B742C0055C9BF /* CustomTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTextField.m; sourceTree = "<group>"; };
-		521F01BF216B742C0055C9BF /* CustomTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTextField.h; sourceTree = "<group>"; };
 		52760F632169DDD800797CF3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		52B94442215100A100007199 /* EasyTimesheet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyTimesheet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52B94445215100A100007199 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -89,13 +106,28 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		521F01B2216B70A60055C9BF /* Custom */ = {
+		52185050216EE19000BC520C /* Provider */ = {
 			isa = PBXGroup;
 			children = (
-				521F01BF216B742C0055C9BF /* CustomTextField.h */,
-				521F01BE216B742C0055C9BF /* CustomTextField.m */,
+				52185051216EE1E700BC520C /* DatabaseProvider.h */,
+				52185052216EE1E700BC520C /* DatabaseProvider.m */,
 			);
-			path = Custom;
+			path = Provider;
+			sourceTree = "<group>";
+		};
+		521850542171D68600BC520C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				521850552171D6A700BC520C /* UserModel.h */,
+				521850562171D6A700BC520C /* UserModel.m */,
+				521850582171D7E100BC520C /* Company.h */,
+				521850592171D7E200BC520C /* Company.m */,
+				5218505B2171D7FB00BC520C /* Timesheet.h */,
+				5218505C2171D7FB00BC520C /* Timesheet.m */,
+				5218506621734E7900BC520C /* TimesheetCell.h */,
+				5218506721734E7900BC520C /* TimesheetCell.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		521F01B7216B72980055C9BF /* Alert */ = {
@@ -129,8 +161,9 @@
 		52B94444215100A100007199 /* EasyTimesheet */ = {
 			isa = PBXGroup;
 			children = (
+				521850542171D68600BC520C /* Model */,
+				52185050216EE19000BC520C /* Provider */,
 				521F01B7216B72980055C9BF /* Alert */,
-				521F01B2216B70A60055C9BF /* Custom */,
 				52760F632169DDD800797CF3 /* GoogleService-Info.plist */,
 				52D3426C215501CF00A579EF /* ViewControllers */,
 				52D3425E2154F61A00A579EF /* TableViewTimeSheet */,
@@ -153,6 +186,9 @@
 				52D342672154F6BF00A579EF /* TimeSheetTableViewCell.h */,
 				52D342682154F6BF00A579EF /* TimeSheetTableViewCell.m */,
 				52D342692154F6BF00A579EF /* TimeSheetTableViewCell.xib */,
+				52185061217340E900BC520C /* CompanyTableViewCell.h */,
+				52185062217340E900BC520C /* CompanyTableViewCell.m */,
+				52185063217340E900BC520C /* CompanyTableViewCell.xib */,
 			);
 			path = TableViewTimeSheet;
 			sourceTree = "<group>";
@@ -248,6 +284,7 @@
 				52B94452215100A300007199 /* LaunchScreen.storyboard in Resources */,
 				521F01B1216B68970055C9BF /* Podfile in Resources */,
 				52B9444F215100A300007199 /* Assets.xcassets in Resources */,
+				52185065217340E900BC520C /* CompanyTableViewCell.xib in Resources */,
 				52760F642169DDD800797CF3 /* GoogleService-Info.plist in Resources */,
 				52D3426B2154F6BF00A579EF /* TimeSheetTableViewCell.xib in Resources */,
 				52B9444D215100A100007199 /* Main.storyboard in Resources */,
@@ -302,16 +339,21 @@
 			files = (
 				52D3426F2155021400A579EF /* RegisterViewController.m in Sources */,
 				52D3427E2155039900A579EF /* CompanyTableViewController.m in Sources */,
+				5218506821734E7900BC520C /* TimesheetCell.m in Sources */,
 				52D34275215502B000A579EF /* TimesheetTableViewController.m in Sources */,
+				52185053216EE1E700BC520C /* DatabaseProvider.m in Sources */,
 				52B9444A215100A100007199 /* ViewController.m in Sources */,
-				521F01C0216B742C0055C9BF /* CustomTextField.m in Sources */,
+				52185064217340E900BC520C /* CompanyTableViewCell.m in Sources */,
 				521F01BD216B73E90055C9BF /* AlertsViewController.m in Sources */,
 				52D3427B2155036800A579EF /* CompanyCRUDViewController.m in Sources */,
 				52B94455215100A300007199 /* main.m in Sources */,
 				52D3426A2154F6BF00A579EF /* TimeSheetTableViewCell.m in Sources */,
 				52D342812157B96700A579EF /* FilterTimesheetViewController.m in Sources */,
+				5218505A2171D7E200BC520C /* Company.m in Sources */,
+				521850572171D6A700BC520C /* UserModel.m in Sources */,
 				52D34278215502EE00A579EF /* EditTimesheetViewController.m in Sources */,
 				52B94447215100A100007199 /* AppDelegate.m in Sources */,
+				5218505D2171D7FB00BC520C /* Timesheet.m in Sources */,
 				52D342722155024000A579EF /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -460,7 +502,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ait.EasyTimesheet;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ait.easytimesheet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -478,7 +520,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ait.EasyTimesheet;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ait.easytimesheet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
