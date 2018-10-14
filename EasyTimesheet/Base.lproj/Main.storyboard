@@ -182,13 +182,6 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="TIMESHEET" id="zik-0r-2fl">
                         <barButtonItem key="backBarButtonItem" title="Back" id="t49-a7-i1b"/>
-                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="cuV-xH-9VR">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <connections>
-                                <action selector="editButton:" destination="74Y-4y-L4y" id="D9a-0T-5g7"/>
-                                <segue destination="egM-t7-dhS" kind="show" identifier="edit_timesheet_segue_identifier" id="2tG-YL-4Ct"/>
-                            </connections>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="FilterIcon" id="s1L-Fm-orM">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
@@ -198,6 +191,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="egM-t7-dhS" kind="show" identifier="edit_timesheet_segue_identifier" id="rTT-MV-6Oh"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gHi-Gm-R78" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -254,11 +250,14 @@
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="addCompanyButton:" destination="ize-Td-v9F" id="h6d-IZ-rlC"/>
-                                <segue destination="SkO-vP-TWm" kind="show" identifier="company_crud_identifier_segue" id="vWk-c2-pcB"/>
+                                <segue destination="SkO-vP-TWm" kind="show" identifier="company_add_segue_identifier" id="vWk-c2-pcB"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="SkO-vP-TWm" kind="show" identifier="company_edit_segue_identifier" id="mCN-O6-1qx"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wns-HN-x1h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1215,6 +1214,7 @@
         <image name="TimeSheetIcon" width="20" height="20"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="vWk-c2-pcB"/>
         <segue reference="Hzz-cZ-53D"/>
         <segue reference="GWz-2t-vos"/>
     </inferredMetricsTieBreakers>

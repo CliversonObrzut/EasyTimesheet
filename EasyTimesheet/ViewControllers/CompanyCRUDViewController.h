@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CompanyCell.h"
 
 @interface CompanyCRUDViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UITextField *companyTextField;
@@ -18,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *friTextField;
 @property (weak, nonatomic) IBOutlet UITextField *satTextField;
 @property (weak, nonatomic) IBOutlet UITextField *sunTextField;
+@property CompanyCell* companySegue;
 - (IBAction)saveButton:(id)sender;
 
 @end

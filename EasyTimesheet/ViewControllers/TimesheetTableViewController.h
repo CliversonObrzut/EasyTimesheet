@@ -18,6 +18,5 @@
 
 @property NSMutableArray *timesheetArray;
 - (IBAction)filterButton:(id)sender;
-- (IBAction)editButton:(id)sender;
 
 @end

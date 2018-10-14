@@ -18,7 +18,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self displayTimesheetData];
     // Do any additional setup after loading the view.
+}
+
+- (void) displayTimesheetData {
+    companyTextField.text = self.timesheetSegue.company;
+    workedDate.text = self.timesheetSegue.workedDate;
+    startHourTextField.text = self.timesheetSegue.startTime;
+    startMinuteTextField.text = self.timesheetSegue.startTime;
+    endHourTextField.text = self.timesheetSegue.endTime;
+    endMinuteTextField.text = self.timesheetSegue.endTime;
+    dayRateTextField.text = self.timesheetSegue.payRate;
 }
 
 - (void)didReceiveMemoryWarning {

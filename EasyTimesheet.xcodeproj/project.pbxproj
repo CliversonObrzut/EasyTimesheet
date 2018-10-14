@@ -14,6 +14,7 @@
 		52185064217340E900BC520C /* CompanyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 52185062217340E900BC520C /* CompanyTableViewCell.m */; };
 		52185065217340E900BC520C /* CompanyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52185063217340E900BC520C /* CompanyTableViewCell.xib */; };
 		5218506821734E7900BC520C /* TimesheetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5218506721734E7900BC520C /* TimesheetCell.m */; };
+		5218506B21736EC400BC520C /* CompanyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5218506A21736EC400BC520C /* CompanyCell.m */; };
 		521F01B1216B68970055C9BF /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 521F01B0216B68970055C9BF /* Podfile */; };
 		521F01BD216B73E90055C9BF /* AlertsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 521F01BB216B73E90055C9BF /* AlertsViewController.m */; };
 		52760F642169DDD800797CF3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52760F632169DDD800797CF3 /* GoogleService-Info.plist */; };
@@ -50,6 +51,8 @@
 		52185063217340E900BC520C /* CompanyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompanyTableViewCell.xib; sourceTree = "<group>"; };
 		5218506621734E7900BC520C /* TimesheetCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimesheetCell.h; sourceTree = "<group>"; };
 		5218506721734E7900BC520C /* TimesheetCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimesheetCell.m; sourceTree = "<group>"; };
+		5218506921736EC400BC520C /* CompanyCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CompanyCell.h; sourceTree = "<group>"; };
+		5218506A21736EC400BC520C /* CompanyCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CompanyCell.m; sourceTree = "<group>"; };
 		521F01B0216B68970055C9BF /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		521F01BB216B73E90055C9BF /* AlertsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertsViewController.m; sourceTree = "<group>"; };
 		521F01BC216B73E90055C9BF /* AlertsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertsViewController.h; sourceTree = "<group>"; };
@@ -126,6 +129,8 @@
 				5218505C2171D7FB00BC520C /* Timesheet.m */,
 				5218506621734E7900BC520C /* TimesheetCell.h */,
 				5218506721734E7900BC520C /* TimesheetCell.m */,
+				5218506921736EC400BC520C /* CompanyCell.h */,
+				5218506A21736EC400BC520C /* CompanyCell.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -343,6 +348,7 @@
 				52D34275215502B000A579EF /* TimesheetTableViewController.m in Sources */,
 				52185053216EE1E700BC520C /* DatabaseProvider.m in Sources */,
 				52B9444A215100A100007199 /* ViewController.m in Sources */,
+				5218506B21736EC400BC520C /* CompanyCell.m in Sources */,
 				52185064217340E900BC520C /* CompanyTableViewCell.m in Sources */,
 				521F01BD216B73E90055C9BF /* AlertsViewController.m in Sources */,
 				52D3427B2155036800A579EF /* CompanyCRUDViewController.m in Sources */,

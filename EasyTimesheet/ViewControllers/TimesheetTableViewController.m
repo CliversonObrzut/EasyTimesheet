@@ -195,10 +195,13 @@
 
 
 - (IBAction)filterButton:(id)sender {
-    // TODO
+    @try{
+        [self performSegueWithIdentifier:@"timesheet_filter_identifier_segue" sender:self];
+    }
+    @catch(NSException *ex){
+        AlertsViewController *alertError = [[AlertsViewController alloc]init];
+        [alertError displayAlertMessage: [NSString stringWithFormat:@"%@", [ex reason]]];
+    }
 }
 
-- (IBAction)editButton:(id)sender {
-    // TODO
-}
 @end

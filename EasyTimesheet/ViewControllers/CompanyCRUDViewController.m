@@ -18,7 +18,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self displayCompanyData];
     // Do any additional setup after loading the view.
+}
+
+- (void) displayCompanyData {
+    companyTextField.text = self.companySegue.company;
+    startDateTextField.text = self.companySegue.startDate;
+    monTextField.text = self.companySegue.prMon;
+    tueTextField.text = self.companySegue.prTue;
+    wedTextField.text = self.companySegue.prWed;
+    thuTextField.text = self.companySegue.prThu;
+    friTextField.text = self.companySegue.prFri;
+    satTextField.text = self.companySegue.prSat;
+    sunTextField.text = self.companySegue.prSun;
 }
 
 - (void)didReceiveMemoryWarning {

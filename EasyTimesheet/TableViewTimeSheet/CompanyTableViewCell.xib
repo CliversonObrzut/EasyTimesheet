@@ -22,6 +22,9 @@
                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fw5-cp-bXO">
                         <rect key="frame" x="264" y="7" width="40" height="40"/>
                         <state key="normal" image="EditIcon"/>
+                        <connections>
+                            <action selector="editCompanyButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="WBC-gn-EWa"/>
+                        </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Company Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Thj-NW-bMT">
                         <rect key="frame" x="16" y="17" width="240" height="21"/>
@@ -43,6 +46,9 @@
             </tableViewCellContentView>
             <accessibility key="accessibilityConfiguration" identifier="companyCell"/>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="companyNameLabel" destination="Thj-NW-bMT" id="Duf-az-AcX"/>
+            </connections>
             <point key="canvasLocation" x="34" y="60"/>
         </tableViewCell>
     </objects>
