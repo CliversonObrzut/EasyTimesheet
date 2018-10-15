@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AlertsViewController.h"
+#import "DatabaseProvider.h"
 #import "CompanyCell.h"
+@import Firebase;
 
 @interface CompanyCRUDViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UITextField *companyTextField;

@@ -17,9 +17,20 @@
 @synthesize companyTextField, workedDate, startHourTextField, startMinuteTextField, endHourTextField, endMinuteTextField, dayRateTextField, timesheetSegue;
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
-    [self displayTimesheetData];
-    // Do any additional setup after loading the view.
+    @try {
+        [super viewDidLoad];
+        [self displayTimesheetData];
+        //Tap gesture to dismiss keyboard
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
+                                       initWithTarget:self
+                                       action:@selector(dismissKeyboard)];
+        
+        [self.view addGestureRecognizer:tap];
+    }
+    @catch(NSException *ex){
+        AlertsViewController *alertError = [[AlertsViewController alloc] init];
+        [alertError displayAlertMessage: [NSString stringWithFormat:@"%@", [ex reason]]];
+    }
 }
 
 - (void) displayTimesheetData {
@@ -30,6 +41,28 @@
     endHourTextField.text = self.timesheetSegue.endTime;
     endMinuteTextField.text = self.timesheetSegue.endTime;
     dayRateTextField.text = self.timesheetSegue.payRate;
+}
+
+/**
+ *
+ * Method to dismiss keyboard
+ * @author Cliverson Obrzut
+ *
+ */
+-(void)dismissKeyboard {
+    @try{
+        [companyTextField resignFirstResponder];
+        [workedDate resignFirstResponder];
+        [startHourTextField resignFirstResponder];
+        [startMinuteTextField resignFirstResponder];
+        [endHourTextField resignFirstResponder];
+        [endMinuteTextField resignFirstResponder];
+        [dayRateTextField resignFirstResponder];
+    }
+    @catch(NSException *ex){
+        AlertsViewController *alertError = [[AlertsViewController alloc] init];
+        [alertError displayAlertMessage: [NSString stringWithFormat:@"%@", [ex reason]]];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

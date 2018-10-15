@@ -17,9 +17,20 @@
 @synthesize companyTextField, startDateTextField, monTextField, tueTextField, wedTextField, thuTextField, friTextField, satTextField, sunTextField;
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
-    [self displayCompanyData];
-    // Do any additional setup after loading the view.
+    @try {
+        [super viewDidLoad];
+        [self displayCompanyData];
+        //Tap gesture to dismiss keyboard
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
+                                       initWithTarget:self
+                                       action:@selector(dismissKeyboard)];
+        
+        [self.view addGestureRecognizer:tap];
+    }
+    @catch(NSException *ex){
+        AlertsViewController *alertError = [[AlertsViewController alloc] init];
+        [alertError displayAlertMessage: [NSString stringWithFormat:@"%@", [ex reason]]];
+    }
 }
 
 - (void) displayCompanyData {
@@ -32,6 +43,30 @@
     friTextField.text = self.companySegue.prFri;
     satTextField.text = self.companySegue.prSat;
     sunTextField.text = self.companySegue.prSun;
+}
+
+/**
+ *
+ * Method to dismiss keyboard
+ * @author Cliverson Obrzut
+ *
+ */
+-(void)dismissKeyboard {
+    @try{
+        [companyTextField resignFirstResponder];
+        [startDateTextField resignFirstResponder];
+        [monTextField resignFirstResponder];
+        [tueTextField resignFirstResponder];
+        [wedTextField resignFirstResponder];
+        [thuTextField resignFirstResponder];
+        [friTextField resignFirstResponder];
+        [satTextField resignFirstResponder];
+        [sunTextField resignFirstResponder];
+    }
+    @catch(NSException *ex){
+        AlertsViewController *alertError = [[AlertsViewController alloc] init];
+        [alertError displayAlertMessage: [NSString stringWithFormat:@"%@", [ex reason]]];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

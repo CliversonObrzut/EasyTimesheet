@@ -124,8 +124,8 @@ NSString *const login_segue = @"register_back_identifier_segue";
                      if(authResult != nil){
                          
                          //Insert new User Profile
-                         self.dbProvider = [[DatabaseProvider alloc] init];
-                         [self.dbProvider addNewUser: userEmail];
+                         /*self.dbProvider = [[DatabaseProvider alloc] init];
+                         [self.dbProvider addNewUser: userEmail];*/
                          
                          //Go to Home screen
                          [self performSegueWithIdentifier:register_segue sender:self];

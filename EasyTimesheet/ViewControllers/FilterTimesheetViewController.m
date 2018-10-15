@@ -16,8 +16,38 @@
 @synthesize companyTextField, startDateTextField, endDateTextField;
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    @try {
+        [super viewDidLoad];
+        
+        //Tap gesture to dismiss keyboard
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
+                                       initWithTarget:self
+                                       action:@selector(dismissKeyboard)];
+        
+        [self.view addGestureRecognizer:tap];
+    }
+    @catch(NSException *ex){
+        AlertsViewController *alertError = [[AlertsViewController alloc] init];
+        [alertError displayAlertMessage: [NSString stringWithFormat:@"%@", [ex reason]]];
+    }
+}
+
+/**
+ *
+ * Method to dismiss keyboard
+ * @author Cliverson Obrzut
+ *
+ */
+-(void)dismissKeyboard {
+    @try{
+        [companyTextField resignFirstResponder];
+        [startDateTextField resignFirstResponder];
+        [endDateTextField resignFirstResponder];
+    }
+    @catch(NSException *ex){
+        AlertsViewController *alertError = [[AlertsViewController alloc] init];
+        [alertError displayAlertMessage: [NSString stringWithFormat:@"%@", [ex reason]]];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
